@@ -6,11 +6,13 @@ import time
 
 from bubble_sort import BubbleSort
 from insert_sort import InsertSort
+from quick_sort import QuickSort
 
 
 sorts = {
     'bubble': BubbleSort,
-    'insert': InsertSort
+    'insert': InsertSort,
+    'quick': QuickSort
 }
 
 
@@ -35,7 +37,7 @@ if __name__ == '__main__':
         print before
     start = time.time()
     sort = sorts[algorithm]
-    after = sort.execute(before)
+    after = sort(before).execute()
     if debug:
         print after
     erapsed = time.time() - start

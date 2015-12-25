@@ -5,10 +5,12 @@ import random
 import time
 
 from bubble_sort import BubbleSort
+from insert_sort import InsertSort
 
 
 sorts = {
-    'bubble': BubbleSort
+    'bubble': BubbleSort,
+    'insert': InsertSort
 }
 
 

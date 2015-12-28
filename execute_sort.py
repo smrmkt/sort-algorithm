@@ -7,12 +7,14 @@ import time
 from bubble_sort import BubbleSort
 from insert_sort import InsertSort
 from quick_sort import QuickSort
+from simple_quick_sort import SimpleQuickSort
 
 
 sorts = {
     'bubble': BubbleSort,
     'insert': InsertSort,
-    'quick': QuickSort
+    'quick': QuickSort,    
+    'squick': SimpleQuickSort
 }
 
 
@@ -24,7 +26,7 @@ if __name__ == '__main__':
     # parse args
     parser = argparse.ArgumentParser()
     parser.add_argument('-a', type=str, nargs='?', default='bubble',
-                        choices=['bubble', 'insert', 'quick'])
+                        choices=['bubble', 'insert', 'quick', 'squick'])
     parser.add_argument('-d',action='store_true', default=False)
     parser.add_argument('-n', type=int, nargs='?', default=20)
     n = parser.parse_args().n
